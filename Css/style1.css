@@ -1,0 +1,76 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+'Helvetica Neue', sans-serif;
+background-color: #ff6760;
+}
+.box{
+max-width: 500px;
+width: 100%;
+
+}
+.search-box{
+width: 50px;
+height: 50px;
+position: relative;
+margin: auto;
+transition: all 0.2s ease;
+
+
+}
+.search-box input::placeholder{
+font-style: italic;
+}
+.search-box input{
+
+box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+position: absolute;
+width: 100%;
+height: 100%;
+padding: 20px;
+border-radius: 25px;
+border: none;
+font-size: 18px;
+outline: none;
+color: rgb(100, 99, 99);
+font-weight: 900px;
+letter-spacing: 0.3px;
+text-transform: capitalize;
+}
+.icon{
+position: absolute;
+top: 0;
+right: 0;
+width: 50px;
+height: 100%;
+line-height: 50px;
+text-align: center;
+font-size: 25px;
+border-radius: 25px;
+color: #ff6760;
+background-color: #fff;
+
+}
+#checking{
+background-color: white;
+display: none;
+
+}
+#checking:checked ~ .search-box .icon{
+background-color: #ff6760;
+color: white;
+width: 70px;
+border-radius:0px 25px 25px 0px;
+}
+#checking:checked ~ .search-box{
+width: 500px;
+}
